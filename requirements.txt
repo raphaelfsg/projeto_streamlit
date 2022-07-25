@@ -1,0 +1,3 @@
+pandas
+seaborn
+boto3<=1.15.3
