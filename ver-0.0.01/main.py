@@ -1,4 +1,7 @@
 import streamlit as st
+import numpy.core.fromnumeric import size
+import Controllers.UserController as UserController
+import models.p_team as team
 
 st.title("Project team")
 
@@ -10,4 +13,9 @@ with st.form(key="include_cliente", clear_on_submit=True):
     input_button_submit = st.form_submit_button("Enviar")
 
 if input_button_submit:
-    
+    team.p_nome= input_name
+    team.p_age = input_age
+    team.p_occupation = input_occupation
+    team.p_social = input_social
+
+    UserController.incluir(p_team)

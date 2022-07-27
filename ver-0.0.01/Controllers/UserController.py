@@ -1,10 +1,9 @@
 import services.database as db
 
-def incluir() {
-    count = cursor.execute("""
-    INSERT INTO project_user (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) 
-    VALUES (?,?,?,?,?)""",
-    'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP).rowcount
-    cnxn.commit()
-}
+def incluir(p_team):
+    count = db.cursor.execute("""
+    INSERT INTO project_user (p_name, p_age, p_occupation, p_social)
+    VALUES (?,?,?,?)""",
+    p_team.name, p_team.age, p_team.occupation, p_team.social).rowcount 
+    db.cnxn.commit()
 
