@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy.core.fromnumeric import size
 import Controllers.UserController as UserController
 import models.p_team as team
 
